@@ -13,9 +13,17 @@ it("should say hello", function() {
   expect(hello).with.lengthOf(5);
 });
 
-it("should return the area of a 5 by 6 rectangle");
+it("should return the area of a 5 by 6 rectangle", function() {
+    const area = utils.area(5,6);
+    expect(area).to.be.a("Number");
+    expect(area).to.equal(5 * 6);
+});
 
-it("should return the are of a circle of radius 5");
+it("should return the area of a circle of radius 5", function(){
+    const circle = utils.circleArea(5);
+    expect(circle).to.be.a("Number");
+    expect(circle).to.equal(Math.PI * 5 * 5)
+});
 
 // ========================================================
 // Challenges
@@ -38,7 +46,6 @@ it("Should remove items from cart");
 // ========================================================
 // Stretch Challenges
 // ========================================================
-something
 it("Should update the count of items in the cart");
 
 it("Should remove an item when count is 0");
